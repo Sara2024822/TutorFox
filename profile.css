@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff914d, #ff3131);
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px;
+}
+
+.profile-info {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-info h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.profile-actions .btn-edit,
+.profile-actions .btn-logout {
+  padding: 12px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-edit {
+  background: #fff;
+  color: #ff3131;
+}
+
+.btn-edit:hover {
+  transform: scale(1.05);
+}
+
+.btn-logout {
+  background: #ff3131;
+  color: #fff;
+}
+
+.btn-logout:hover {
+  transform: scale(1.05);
+}

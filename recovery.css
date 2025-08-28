@@ -1,0 +1,482 @@
+:root {
+    --primary-color: #fb5520;
+    --secondary-color: #e04a1a;
+    --accent-color: #ff6b3b;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffede6, #fff);
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.recovery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.recovery-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.logo {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo-subtitle {
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.recovery-steps {
+    position: relative;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.step h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.step h3::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#step1 h3::before {
+    content: '1';
+}
+
+#step2 h3::before {
+    content: '2';
+}
+
+#step3 h3::before {
+    content: '3';
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(251, 85, 32, 0.2);
+    outline: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.password-requirements {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.password-requirements p {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.password-requirements ul {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.password-requirements li {
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.password-requirements li::before {
+    content: '●';
+    margin-right: 0.5rem;
+    color: #ddd;
+}
+
+.password-requirements li.valid {
+    color: var(--success-color);
+}
+
+.password-requirements li.valid::before {
+    content: '✓';
+    color: var(--success-color);
+}
+
+.resend-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.resend-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.resend-text a:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.success-message svg {
+    margin-bottom: 1rem;
+}
+
+.success-message h3 {
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.back-to-login {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-to-login a {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: var(--danger-color);
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+    .recovery-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.8rem;
+    }
+}/* Estilos para a página de recuperação de senha */
+.recovery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.recovery-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.recovery-steps {
+    position: relative;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.step h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.step h3::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#step1 h3::before {
+    content: '1';
+}
+
+#step2 h3::before {
+    content: '2';
+}
+
+#step3 h3::before {
+    content: '3';
+}
+
+.password-requirements {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.password-requirements p {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.password-requirements ul {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.password-requirements li {
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.password-requirements li::before {
+    content: '●';
+    margin-right: 0.5rem;
+    color: #ddd;
+}
+
+.password-requirements li.valid {
+    color: var(--success-color);
+}
+
+.password-requirements li.valid::before {
+    content: '✓';
+    color: var(--success-color);
+}
+
+.resend-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.resend-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.resend-text a:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.success-message svg {
+    margin-bottom: 1rem;
+}
+
+.success-message h3 {
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.back-to-login {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-to-login a {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}
+
+.resend-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.resend-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.resend-text a:hover {
+    text-decoration: underline;
+}
+
+.resend-text a[style*="color: #999"] {
+    pointer-events: none;
+}
+
+/* Melhorias para mensagens */
+.success-message {
+    color: var(--success-color);
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background-color: #eeffee;
+    border-radius: 5px;
+    border: 1px solid var(--success-color);
+    font-size: 0.9rem;
+}
+
+.error-message {
+    color: var(--danger-color);
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background-color: #ffeeee;
+    border-radius: 5px;
+    border: 1px solid var(--danger-color);
+    font-size: 0.9rem;
+}

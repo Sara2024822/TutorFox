@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorFox - Cadastro</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-card">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="teste.png" alt="TutorFox" class="logo-photo">
+                </div>
+                <div class="logo-text">TutorFox</div>
+                <div class="logo-subtitle">Crie sua conta</div>
+            </div>
+            
+            <form id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Nome</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="Seu nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Sobrenome</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Seu sobrenome" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" class="form-control" placeholder="Crie uma senha" required>
+                        <div class="password-strength">
+                            <div class="strength-bar"></div>
+                            <div class="strength-text">Força da senha</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar Senha</label>
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirme sua senha" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userType">Tipo de Conta</label>
+                    <div class="account-type-selector">
+                        <div class="account-type-option" data-value="student">
+                            <div class="account-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#fb5520">
+                                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 5.5V7H9V5.5L3 7V9L10 11V13L8 13.5V15.5L12 14L16 15.5V13.5L14 13V11L21 9Z"/>
+                                </svg>
+                            </div>
+                            <div class="account-info">
+                                <div class="account-title">Aluno</div>
+                                <div class="account-description">Acesse materiais, exercícios e recursos de estudo</div>
+                            </div>
+                        </div>
+                        
+                        <div class="account-type-option" data-value="teacher">
+                            <div class="account-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#fb5520">
+                                    <path d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3ZM18.82 9L12 12.72L5.18 9L12 5.28L18.82 9ZM17 15.99L12 18.72L7 15.99V12.27L12 15L17 12.27V15.99Z"/>
+                                </svg>
+                            </div>
+                            <div class="account-info">
+                                <div class="account-title">Professor</div>
+                                <div class="account-description">Crie e gerencie conteúdos, atividades e turmas</div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="userType" value="" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="terms" required>
+                        <span class="checkmark"></span>
+                        Concordo com os <a href="#" class="link">Termos de Serviço</a> e <a href="#" class="link">Política de Privacidade</a>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="newsletter">
+                        <span class="checkmark"></span>
+                        Desejo receber novidades e atualizações por e-mail
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Criar Conta</button>
+                
+                <div class="login-link">
+                    Já tem uma conta? <a href="login.html" class="link">Faça login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 TutorFox - Todos os direitos reservados
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

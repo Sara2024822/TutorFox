@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorFox - Recuperar Senha</title>
+    <link rel="stylesheet" href="recovery.css">
+</head>
+<body>
+    <div class="recovery-container">
+        <div class="recovery-card">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="teste.png" alt="TutorFox" class="logo-photo">
+                </div>
+                <div class="logo-text">TutorFox</div>
+                <div class="logo-subtitle">Recuperação de Senha</div>
+            </div>
+            
+            <div class="recovery-steps">
+                <div class="step active" id="step1">
+                    <h3>1. Informe seu e-mail</h3>
+                    <form id="emailForm">
+                        <div class="form-group">
+                            <label for="recoveryEmail">E-mail cadastrado</label>
+                            <input type="email" id="recoveryEmail" class="form-control" placeholder="seu@email.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar código</button>
+                    </form>
+                </div>
+                
+                <div class="step" id="step2">
+                    <h3>2. Verifique seu e-mail</h3>
+                    <p>Enviamos um código de verificação para <span id="userEmail"></span></p>
+                    <form id="codeForm">
+                        <div class="form-group">
+                            <label for="verificationCode">Código de verificação</label>
+                            <input type="text" id="verificationCode" class="form-control" placeholder="Digite o código recebido" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Verificar código</button>
+                        <p class="resend-text">Não recebeu o código? <a href="#" id="resendCode">Reenviar</a></p>
+                    </form>
+                </div>
+                
+                <div class="step" id="step3">
+                    <h3>3. Crie uma nova senha</h3>
+                    <form id="newPasswordForm">
+                        <div class="form-group">
+                            <label for="newPassword">Nova senha</label>
+                            <input type="password" id="newPassword" class="form-control" placeholder="Digite sua nova senha" required>
+                            <div class="password-requirements">
+                                <p>A senha deve conter:</p>
+                                <ul>
+                                    <li id="req-length">Pelo menos 8 caracteres</li>
+                                    <li id="req-uppercase">Pelo menos uma letra maiúscula</li>
+                                    <li id="req-number">Pelo menos um número</li>
+                                    <li id="req-special">Pelo menos um caractere especial</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Confirmar nova senha</label>
+                            <input type="password" id="confirmNewPassword" class="form-control" placeholder="Confirme sua nova senha" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Redefinir senha</button>
+                    </form>
+                </div>
+                
+                <div class="step" id="step4">
+                    <div class="success-message">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="#28a745">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <h3>Senha redefinida com sucesso!</h3>
+                        <p>Sua senha foi alterada com sucesso. Agora você pode fazer login com sua nova senha.</p>
+                        <a href="Login.html" class="btn btn-primary">Fazer login</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="back-to-login">
+                <a href="Login.html">&larr; Voltar para o login</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 TutorFox - Todos os direitos reservados
+    </div>
+
+    <script src="recovery.js"></script>
+</body>
+</html>

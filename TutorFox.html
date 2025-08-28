@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorFox - Seu Tutor Inteligente</title>
+    <link rel="stylesheet" href="TutorFox.css">
+
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="raposa.png" alt="TutorFox Logo">
+                <span>TutorFox</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar materiais, exercícios...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#dashboard">Painel</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="Login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Cadastre-se</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="teste.png" alt="Fox Mascot" class="fox-mascot">
+            <h1>Seu Tutor Inteligente de Estudos</h1>
+            <p>O TutorFox transforma seus materiais em resumos, flashcards, jogos e planos de estudo personalizados, acompanhando seu progresso com um companheiro fofo!</p>
+            <a href="#dashboard" class="btn btn-primary">Comece Agora</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Como o TutorFox Ajuda Você</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Resumos Inteligentes</h3>
+                    <p>Nossa IA analisa seus materiais e cria resumos concisos com os pontos mais importantes para revisão rápida.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Flashcards Automáticos</h3>
+                    <p>Geração de flashcards para memorização ativa, com base nos conceitos mais relevantes do conteúdo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Jogos Educativos</h3>
+                    <p>Transforme seu estudo em diversão com jogos personalizados baseados no conteúdo que você precisa aprender.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Cronogramas Personalizados</h3>
+                    <p>Planos de estudo adaptados ao seu ritmo e dificuldades, com ajustes automáticos conforme seu progresso.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Companheiro Motivacional</h3>
+                    <p>Seu fox mantém o "foguinho" do estudo aceso e te motiva com mensagens e recompensas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Estudo em Grupo</h3>
+                    <p>Conecte-se com colegas e mantenham-se motivados juntos - o progresso de um afeta o grupo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2 class="section-title">Seu Painel de Estudos</h2>
+            <div class="dashboard-container">
+                <div class="tabs">
+                    <div class="tab active" data-tab="professor">Professor</div>
+                    <div class="tab" data-tab="aluno">Aluno</div>
+                </div>
+                
+                <div id="professor" class="tab-content active">
+                    <h3>Envie seus materiais</h3>
+                    <div class="upload-area">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <p>Arraste e solte seus slides, listas de exercícios ou materiais aqui</p>
+                        <p>ou</p>
+                        <button class="btn btn-primary">Selecionar Arquivos</button>
+                        <p>Formatos suportados: PDF, PPTX, DOCX, TXT</p>
+                    </div>
+                    
+                    <div class="ai-output">
+                        <h3>Recursos Gerados pela IA</h3>
+                        <div class="tabs">
+                            <div class="tab active" data-subtab="resumo">Resumo</div>
+                            <div class="tab" data-subtab="flashcards">Flashcards</div>
+                            <div class="tab" data-subtab="videos">Vídeos</div>
+                            <div class="tab" data-subtab="jogos">Jogos</div>
+                        </div>
+                        
+                        <div id="resumo" class="tab-content active">
+                            <p>Resumo automático gerado pela IA com base nos materiais enviados:</p>
+                            <textarea class="form-control" rows="10" placeholder="O resumo aparecerá aqui..."></textarea>
+                            <button class="btn btn-primary" style="margin-top: 1rem;">Exportar Resumo</button>
+                        </div>
+                        
+                        <div id="flashcards" class="tab-content">
+                            <p>Flashcards gerados automaticamente para seus alunos:</p>
+                            <div class="flashcards-container">
+                                <!-- Flashcards serão gerados aqui -->
+                            </div>
+                            <button class="btn btn-primary" style="margin-top: 1rem;">Exportar Flashcards</button>
+                        </div>
+                        
+                        <div id="videos" class="tab-content">
+                            <p>Videoaulas recomendadas para complementar o conteúdo:</p>
+                            <ul class="resources-list">
+                                <li>
+                                    <i class="fas fa-video"></i>
+                                    <a href="#" class="resource-link" target="_blank">Introdução ao Conteúdo - Canal Educativo</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-video"></i>
+                                    <a href="#" class="resource-link" target="_blank">Exemplos Práticos - Aula Show</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-video"></i>
+                                    <a href="#" class="resource-link" target="_blank">Aprofundamento Teórico - Universidade X</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div id="jogos" class="tab-content">
+                            <p>Jogos educativos que podem ser usados em sala de aula:</p>
+                            <div class="games-container">
+                                <div class="game-card">
+                                    <i class="fas fa-question-circle"></i>
+                                    <h4>Quiz Rápido</h4>
+                                    <p>Teste de perguntas e respostas sobre o conteúdo</p>
+                                </div>
+                                <div class="game-card">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <h4>Quebra-Cabeça</h4>
+                                    <p>Monte conceitos na ordem correta</p>
+                                </div>
+                                <div class="game-card">
+                                    <i class="fas fa-chess"></i>
+                                    <h4>Batalha de Conceitos</h4>
+                                    <p>Jogo competitivo entre equipes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="aluno" class="tab-content">
+                    <h3>Seu Progresso de Estudos</h3>
+                    
+                    <div class="fox-status">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmI1NTIwIiBkPSJNNDk2LjEgMTM4LjNsLTEyOCAxMjhjLTcuOCA3LjgtMjAuNSA3LjgtMjguMyAwTDEzNS45IDEzOC4zYy03LjgtNy44LTcuOC0yMC41IDAtMjguMyA3LjgtNy44IDIwLjUtNy44IDI4LjMgMEwyNTYgMjIzLjZsOTEuOS05MS45YzcuOC03LjggMjAuNS03LjggMjguMyAwIDcuOCA3LjggNy44IDIwLjQgMCAyOC4zeiIvPjwvc3ZnPg==" alt="Seu Fox">
+                        <div>
+                            <h4>Seu Companheiro Fox</h4>
+                            <p><i class="fas fa-fire fire"></i> Foguinho do estudo: Forte (5/7 dias esta semana)</p>
+                            <p>Nível: 3 - Fox Estudioso</p>
+                            <p>Grupo: Turma Matemática 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="study-plan">
+                        <h3>Seu Cronograma Semanal</h3>
+                        <div class="plan-week">
+                            <h4>Semana 15 - Matemática Básica</h4>
+                            <div class="plan-days">
+                                <div class="day completed">S</div>
+                                <div class="day completed">T</div>
+                                <div class="day completed">Q</div>
+                                <div class="day current">Q</div>
+                                <div class="day">S</div>
+                                <div class="day">S</div>
+                                <div class="day">D</div>
+                            </div>
+                            <p>Tarefas para hoje:</p>
+                            <ul class="resources-list">
+                                <li>
+                                    <i class="fas fa-book"></i>
+                                    <a href="#" class="resource-link">Revisar flashcards de álgebra</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-gamepad"></i>
+                                    <a href="#" class="resource-link">Jogar o jogo de equações</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-video"></i>
+                                    <a href="#" class="resource-link">Assistir vídeo sobre funções</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-output">
+                        <h3>Seus Recursos de Estudo</h3>
+                        <div class="tabs">
+                            <div class="tab active" data-subtab="meus-resumos">Resumos</div>
+                            <div class="tab" data-subtab="meus-flashcards">Flashcards</div>
+                            <div class="tab" data-subtab="exercicios">Exercícios</div>
+                            <div class="tab" data-subtab="meus-jogos">Jogos</div>
+                        </div>
+                        
+                        <div id="meus-resumos" class="tab-content active">
+                            <p>Resumos gerados para seus materiais:</p>
+                            <ul class="resources-list">
+                                <li>
+                                    <i class="fas fa-file-alt"></i>
+                                    <a href="#" class="resource-link">Resumo - Álgebra Básica</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-alt"></i>
+                                    <a href="#" class="resource-link">Resumo - Geometria Plana</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-alt"></i>
+                                    <a href="#" class="resource-link">Resumo - Funções Matemáticas</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div id="meus-flashcards" class="tab-content">
+                            <p>Flashcards para revisão:</p>
+                            <div class="flashcards-container">
+                                <div class="flashcard">
+                                    <h4>Equação do 1º Grau</h4>
+                                    <p>ax + b = 0, onde a ≠ 0. Solução: x = -b/a</p>
+                                </div>
+                                <div class="flashcard">
+                                    <h4>Teorema de Pitágoras</h4>
+                                    <p>Em um triângulo retângulo: a² = b² + c²</p>
+                                </div>
+                                <div class="flashcard">
+                                    <h4>Função Quadrática</h4>
+                                    <p>f(x) = ax² + bx + c. Gráfico: parábola</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="margin-top: 1rem;">Praticar Agora</button>
+                        </div>
+                        
+                        <div id="exercicios" class="tab-content">
+                            <p>Exercícios recomendados para você:</p>
+                            <ul class="resources-list">
+                                <li>
+                                    <i class="fas fa-question-circle"></i>
+                                    <a href="#" class="resource-link">Lista de Equações - Nível Básico</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-question-circle"></i>
+                                    <a href="#" class="resource-link">Problemas de Geometria - Nível Intermediário</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-question-circle"></i>
+                                    <a href="#" class="resource-link">Desafios de Funções - Nível Avançado</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div id="meus-jogos" class="tab-content">
+                            <p>Jogos para aprender de forma divertida:</p>
+                            <div class="games-container">
+                                <div class="game-card">
+                                    <i class="fas fa-question-circle"></i>
+                                    <h4>Quiz Matemático</h4>
+                                    <p>Teste seus conhecimentos contra o tempo</p>
+                                </div>
+                                <div class="game-card">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <h4>Montando Equações</h4>
+                                    <p>Complete as equações corretamente</p>
+                                </div>
+                                <div class="game-card">
+                                    <i class="fas fa-trophy"></i>
+                                    <h4>Batalha Matemática</h4>
+                                    <p>Desafie seus colegas de turma</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="fox-message">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmI1NTIwIiBkPSJNNDk2LjEgMTM4LjNsLTEyOCAxMjhjLTcuOCA3LjgtMjAuNSA3LjgtMjguMyAwTDEzNS45IDEzOC4zYy03LjgtNy44LTcuOC0yMC41IDAtMjguMyA3LjgtNy44IDIwLjUtNy44IDI4LjMgMEwyNTYgMjIzLjZsOTEuOS05MS45YzcuOC03LjggMjAuNS03LjggMjguMyAwIDcuOCA3LjggNy44IDIwLjQgMCAyOC4zeiIvPjwvc3ZnPg==" alt="Fox">
+        <span class="close">&times;</span>
+        <p><strong>Olá, estudante!</strong></p>
+        <p>Você já estudou hoje? Não deixe seu foguinho apagar!</p>
+        <p>Que tal revisar os flashcards de álgebra agora?</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TutorFox</h3>
+                    <p>Transformando a educação com inteligência artificial e gamificação para professores e alunos.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Recursos</a></li>
+                        <li><a href="#dashboard">Painel</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contato@tutorfox.com</li>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 TutorFox. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('[data-tab], [data-subtab]').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const isMainTab = tab.hasAttribute('data-tab');
+                const tabType = isMainTab ? 'tab' : 'subtab';
+                const targetId = tab.getAttribute(`data-${tabType}`);
+                const parent = tab.closest('.tabs').parentElement;
+                
+                // Remove active class from all tabs in this group
+                tab.closest('.tabs').querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all tab contents in this group
+                parent.querySelectorAll(`.${tabType}-content`).forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the target tab content
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+        
+        // Simulate file upload
+        const uploadArea = document.querySelector('.upload-area');
+        if (uploadArea) {
+            uploadArea.addEventListener('click', () => {
+                // In a real app, this would trigger file selection
+                console.log('File upload initiated');
+                
+                // Simulate AI processing
+                setTimeout(() => {
+                    alert('Materiais processados com sucesso! Os recursos da IA estão agora disponíveis.');
+                    generateFlashcards();
+                }, 2000);
+            });
+        }
+        
+        // Generate sample flashcards
+        function generateFlashcards() {
+            const flashcardsContainer = document.querySelector('#flashcards .flashcards-container');
+            if (flashcardsContainer) {
+                flashcardsContainer.innerHTML = '';
+                
+                const sampleFlashcards = [
+                    { title: "Equação do 1º Grau", content: "Forma geral: ax + b = 0. Solução: x = -b/a" },
+                    { title: "Teorema de Pitágoras", content: "Em um triângulo retângulo: a² = b² + c²" },
+                    { title: "Área do Círculo", content: "A = πr², onde r é o raio do círculo" },
+                    { title: "Função Quadrática", content: "f(x) = ax² + bx + c. Gráfico é uma parábola" },
+                    { title: "Logaritmo", content: "logₐb = c ⇔ aᶜ = b" },
+                    { title: "Progressão Aritmética", content: "Termo geral: aₙ = a₁ + (n-1)r" }
+                ];
+                
+                sampleFlashcards.forEach(card => {
+                    const flashcard = document.createElement('div');
+                    flashcard.className = 'flashcard';
+                    flashcard.innerHTML = `
+                        <h4>${card.title}</h4>
+                        <p>${card.content}</p>
+                    `;
+                    flashcardsContainer.appendChild(flashcard);
+                });
+            }
+        }
+        
+        // Fox message functionality
+        const foxMessage = document.querySelector('.fox-message');
+        const closeMessage = document.querySelector('.fox-message .close');
+        
+        if (foxMessage && closeMessage) {
+            // Show message after 5 seconds
+            setTimeout(() => {
+                foxMessage.classList.add('show');
+            }, 5000);
+            
+            // Close message when X is clicked
+            closeMessage.addEventListener('click', () => {
+                foxMessage.classList.remove('show');
+            });
+            
+            // Show random motivational messages every 2 minutes
+            setInterval(() => {
+                const messages = [
+                    "Hora de dar uma olhada nos seus flashcards!",
+                    "Você está indo bem! Que tal um jogo para relaxar?",
+                    "Não esqueça de revisar o resumo de hoje!",
+                    "Seu foguinho está forte! Continue assim!",
+                    "Já fez os exercícios recomendados para hoje?"
+                ];
+                
+                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                foxMessage.querySelector('p:last-child').textContent = randomMessage;
+                foxMessage.classList.add('show');
+                
+                // Auto-hide after 10 seconds
+                setTimeout(() => {
+                    foxMessage.classList.remove('show');
+                }, 10000);
+            }, 120000);
+        }
+        
+        // Study days functionality
+        const days = document.querySelectorAll('.day');
+        days.forEach(day => {
+            day.addEventListener('click', () => {
+                if (!day.classList.contains('current')) {
+                    if (day.classList.contains('completed')) {
+                        day.classList.remove('completed');
+                        day.classList.add('missed');
+                    } else if (day.classList.contains('missed')) {
+                        day.classList.remove('missed');
+                    } else {
+                        day.classList.add('completed');
+                    }
+                    
+                    // Update fox status
+                    updateFoxStatus();
+                }
+            });
+        });
+        
+        function updateFoxStatus() {
+            const completedDays = document.querySelectorAll('.day.completed').length;
+            const totalDays = document.querySelectorAll('.day:not(.current)').length;
+            const fireElement = document.querySelector('.fox-status .fire');
+            
+            if (fireElement) {
+                if (completedDays >= 5) {
+                    fireElement.style.color = "var(--accent-color)";
+                    fireElement.nextSibling.textContent = " Foguinho do estudo: Forte (" + completedDays + "/" + totalDays + " dias esta semana)";
+                } else if (completedDays >= 3) {
+                    fireElement.style.color = "var(--warning-color)";
+                    fireElement.nextSibling.textContent = " Foguinho do estudo: Médio (" + completedDays + "/" + totalDays + " dias esta semana)";
+                } else {
+                    fireElement.style.color = "var(--danger-color)";
+                    fireElement.nextSibling.textContent = " Foguinho do estudo: Fraco (" + completedDays + "/" + totalDays + " dias esta semana)";
+                }
+            }
+        }
+        
+        // Initialize
+        generateFlashcards();
+        updateFoxStatus();
+    </script>
+</body>
+</html>
